@@ -34,6 +34,6 @@
 
     <img src="https://vuejs.org/assets/lifecycle.16e4c08e.png" width="400" height="800">
 
-    <div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://vuejs.org/guide/essentials/lifecycle.html"  target="_blank">vuejs.org</a></span></span>&nbsp; &nbsp;</div></div>
+    <div><span><i>Source:</i>&nbsp;<span><a href="https://vuejs.org/guide/essentials/lifecycle.html" target="_blank">vuejs.org</a></span></span>&nbsp; &nbsp;</div>
 
     **[⬆ Back to Top](#table-of-contents)**
