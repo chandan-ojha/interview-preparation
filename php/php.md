@@ -10,6 +10,7 @@
 | 2   | [What is PEAR in PHP?](#what-is-pear-in-php)                                                                                                        |
 | 3   | [What is the name of scripting engine in PHP?](#what-is-the-name-of-scripting-engine-in-php)                                                        |
 | 4   | [What is the difference between "Echo", "Print", "Print_r" and "Var_dump"?](#What-is-the-difference-between-echo-print-print_r-and-var_dump-in-PHP) |
+| 5   | [What is the difference between $message and $$message?](#What-is-the-difference-between-$message-and-$$message-in-PHP)                             |
 
 1.  ### What is PHP?
 
@@ -51,6 +52,24 @@
 
      var_dump($fruits); //Output: array(3) { [0]=> string(5) "apple" [1]=> string(6) "banana" [2]=> string(6) "orange" }
 
+    ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+5.  ### What is the difference between $message and $$message?
+
+    The **$message** (single dollar) is a normal variable with the name message that stores any value like string, integer, float, etc.
+
+    The **$$message** (double dollar) is a reference variable that stores the value of the $message inside it.
+
+    **Example :**
+
+    ```
+    $message = 'hello';
+    $hello = 'world';
+
+    echo $message; // Outputs: hello
+    echo $$message; // Outputs: world
 
     ```
 
