@@ -4,13 +4,13 @@
 
 ---
 
-| No. | Questions                                                                                   |
-| --- | ------------------------------------------------------------------------------------------- |
-| 1   | [What is PHP](#what-is-PHP)                                                                 |
-| 2   | [What is PEAR in PHP](#what-is-pear-in-php)                                                 |
-| 3   | [What is the name of scripting engine in PHP](#what-is-the-name-of-scripting-engine-in-php) |
+| No. | Questions                                                                                    |
+| --- | -------------------------------------------------------------------------------------------- |
+| 1   | [What is PHP?](#what-is-PHP)                                                                 |
+| 2   | [What is PEAR in PHP?](#what-is-pear-in-php)                                                 |
+| 3   | [What is the name of scripting engine in PHP?](#what-is-the-name-of-scripting-engine-in-php) |
 
-### 1. What is PHP?
+1.  ### What is PHP?
 
     **PHP** stands for Hypertext Preprocessor. It is an open source server-side scripting language which is widely used for web development.
 
