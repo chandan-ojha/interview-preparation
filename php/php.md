@@ -12,6 +12,7 @@
 | 4   | [What is the difference between "echo", "print", "print_r" and "var_dump"?](#what-is-the-difference-between-echo-print-print_r-and-var_dump-in-PHP) |
 | 5   | [What is the difference between `$message` and `$$message`?](#what-is-the-difference-between-$message-and-$$message-in-PHP)                         |
 | 6   | [Explain the different types of errors in PHP !](#explain-the-different-types-of-errors-in-php)                                                     |
+| 7   | [How many data types are there in PHP?](#how-many-data-types-are-there-in-php)                                                                      |
 
 1.  ### What is PHP?
 
@@ -87,3 +88,28 @@
     3. **Fatal errors** : These are critical errors - for example, instantiating an object of a non-existent class, or calling a non-existent function. These errors cause the immediate termination of the script, and PHP's default behavior is to display them to the user when they take place.
 
     **[⬆ Back to Top](#table-of-contents)**
+
+7.  ### How many data types are there in PHP?
+
+    **PHP** data types are used to hold different types of data or values. There are 8 primitive data types which are further categorized in 3 types:
+
+    1. Scalar data types
+    2. Compound data types
+    3. Special data types
+
+    **Scalar data types** : Scalar data types are those which can hold only a single value. There are 4 scalar data types:
+
+    1. Boolean
+    2. Integer
+    3. Float
+    4. String
+
+    **Compound data types** : Compound data types are those which can hold multiple values and are further categorized in 2 types:
+
+    1. Array
+    2. Object
+
+    **Special data types** : Special data types are those which can hold special values and are further categorized in 2 types:
+
+    1. Resource
+    2. NULL
