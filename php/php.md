@@ -13,6 +13,7 @@
 | 5   | [What is the difference between `$message` and `$$message`?](#what-is-the-difference-between-$message-and-$$message-in-PHP)                         |
 | 6   | [Explain the different types of errors in PHP !](#explain-the-different-types-of-errors-in-php)                                                     |
 | 7   | [How many data types are there in PHP?](#how-many-data-types-are-there-in-php)                                                                      |
+| 8   | [What is the use of header() function in PHP?](#what-is-the-use-of-header-function-in-php)                                                          |
 
 1.  ### What is PHP?
 
@@ -113,5 +114,21 @@
 
     1. Resource
     2. NULL
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+8.  ### What is the use of header() function in PHP?
+
+    The **header()** function is used to send a raw HTTP header to a client. It must be called before sending the actual output, otherwise it will result in an error.
+
+    **Example :**
+
+    ```
+     <?php
+       header('Location: http://www.example.com/');
+       exit;
+      ?>
+
+    ```
 
     **[⬆ Back to Top](#table-of-contents)**
