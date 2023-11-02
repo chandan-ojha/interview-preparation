@@ -4,11 +4,12 @@
 
 ---
 
-| No. | Questions                                                                                    |
-| --- | -------------------------------------------------------------------------------------------- |
-| 1   | [What is PHP?](#what-is-PHP)                                                                 |
-| 2   | [What is PEAR in PHP?](#what-is-pear-in-php)                                                 |
-| 3   | [What is the name of scripting engine in PHP?](#what-is-the-name-of-scripting-engine-in-php) |
+| No. | Questions                                                                                                                                           |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | [What is PHP?](#what-is-PHP)                                                                                                                        |
+| 2   | [What is PEAR in PHP?](#what-is-pear-in-php)                                                                                                        |
+| 3   | [What is the name of scripting engine in PHP?](#what-is-the-name-of-scripting-engine-in-php)                                                        |
+| 4   | [What is the difference between "Echo", "Print", "Print_r" and "Var_dump"?](#What-is-the-difference-between-echo-print-print_r-and-var_dump-in-PHP) |
 
 1.  ### What is PHP?
 
@@ -26,5 +27,15 @@
 3.  ### What is the name of scripting engine in PHP?
 
     The scripting engine in PHP is called Zend Engine. It provides PHP with the ability to run scripts efficiently and quickly.
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+4.  ### What is the difference between "Echo", "Print", "Print_r" and "Var_dump"?
+
+    **Echo** and **print** are more or less the same. They are both used to output data to the screen.
+
+    The differences are small: **echo** has no return value while **print** has a return value of 1 so it can be used in expressions. **echo** can take multiple parameters (although such usage is rare) while **print** can take one argument. **echo** is marginally faster than **print**.
+
+    **print_r** displays information about a variable in a way that's readable by humans. **print_r** is used to print human-readable information about a variable, while **var_dump** is used to dump information about a variable that's more targeted towards developers.
 
     **[⬆ Back to Top](#table-of-contents)**
