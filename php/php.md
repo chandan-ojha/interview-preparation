@@ -38,4 +38,20 @@
 
     **print_r** displays information about a variable in a way that's readable by humans. **print_r** is used to print human-readable information about a variable, while **var_dump** is used to dump information about a variable that's more targeted towards developers.
 
+    **Example :**
+
+    ```
+     echo "Hello, ", "World!"; //Output: Hello, World!
+
+     print "Hello, World!"; //Output: Hello, World!
+
+     $fruits = array("apple", "banana", "orange");
+
+     print_r($fruits); //Output: Array ( [0] => apple [1] => banana [2] => orange )
+
+     var_dump($fruits); //Output: array(3) { [0]=> string(5) "apple" [1]=> string(6) "banana" [2]=> string(6) "orange" }
+
+
+    ```
+
     **[⬆ Back to Top](#table-of-contents)**
