@@ -14,6 +14,7 @@
 | 6   | [Explain the different types of errors in PHP !](#explain-the-different-types-of-errors-in-php)                                                     |
 | 7   | [How many data types are there in PHP?](#how-many-data-types-are-there-in-php)                                                                      |
 | 8   | [What is the use of header() function in PHP?](#what-is-the-use-of-header-function-in-php)                                                          |
+| 9   | [How many types of array are there in PHP?](#how-many-types-of-array-are-there-in-php)                                                              |
 
 1.  ### What is PHP?
 
@@ -128,6 +129,37 @@
        header('Location: http://www.example.com/');
        exit;
       ?>
+
+    ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+9.  ### How many types of array are there in PHP?
+
+    There are 3 types of array in PHP:
+
+    1. **Indexed array** : An array with a numeric index. Values are stored and accessed in linear fashion.
+
+    2. **Associative array** : An array with strings as index. This stores element values in association with key values rather than in a strict linear index order.
+
+    3. **Multidimensional array** : An array containing one or more arrays and values are accessed using multiple indices.
+
+    **Example :**
+
+    ```
+    $indexed_array = array("HTML", "CSS", "PHP");
+
+    $associative_array = array(
+        "HTML"=>"Hyper Text Markup Language",
+        "CSS"=>"Cascading Style Sheet",
+        "PHP"=>"Hypertext Preprocessor"
+        );
+
+    $multidimensional_array = array(
+        "HTML"=>array("Hyper Text Markup Language", "Markup Language"),
+        "CSS"=>array("Cascading Style Sheet", "Style Sheet Language"),
+        "PHP"=>array("Hypertext Preprocessor", "Server Side Scripting Language")
+        );
 
     ```
 
