@@ -56,7 +56,7 @@
 
     **[⬆ Back to Top](#table-of-contents)**
 
-5.  ### What is the difference between $message  and  $$message?
+5.  ### What is the difference between $message and $$message?
 
     The **$message** (single dollar) is a normal variable with the name message that stores any value like string, integer, float, etc.
 
