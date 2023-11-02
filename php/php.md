@@ -15,3 +15,16 @@
     **PHP** stands for Hypertext Preprocessor. It is an open source server-side scripting language which is widely used for web development.
 
     **[⬆ Back to Top](#table-of-contents)**
+
+2.  ### What is PEAR in PHP?
+
+    **PEAR** stands for PHP Extension and Application Repository. It extends PHP and provides a higher level of programming for web developers.
+    It contains all types of PHP code snippets and libraries. It also provides a command-line interface to install "packages" automatically.
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+3.  ### What is the name of scripting engine in PHP?
+
+        The scripting engine in PHP is called **Zend Engine**. It provides PHP with the ability to run scripts efficiently and quickly.
+
+        **[⬆ Back to Top](#table-of-contents)**
