@@ -15,6 +15,7 @@
 | 7   | [How many data types are there in PHP?](#how-many-data-types-are-there-in-php)                                                                      |
 | 8   | [What is the use of header() function in PHP?](#what-is-the-use-of-header-function-in-php)                                                          |
 | 9   | [How many types of array are there in PHP?](#how-many-types-of-array-are-there-in-php)                                                              |
+| 10  | [Explain some of the PHP array functions?](#explain-some-of-the-PHP-array-functions)                                                                |
 
 1.  ### What is PHP?
 
@@ -162,5 +163,127 @@
         );
 
     ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+10. ### Explain some of the PHP array functions?
+
+    1. **array_push()**: This function is used to insert new items at the end of an array.
+
+       ```
+       <?php
+         $fruits = array("apple", "banana");
+         array_push($fruits, "cherry", "date");
+         print_r($fruits);
+       ?>
+       ```
+
+    2. **array_pop()**: This function removes the last element of an array.
+
+       ```
+       <?php
+         $fruits = array("apple", "banana", "cherry");
+         $lastFruit = array_pop($fruits);
+         echo $lastFruit;
+        ?>
+       ```
+
+    3. **array_shift()**: This function removes the first element of an array.
+
+       ```
+       <?php
+         $fruits = array("apple", "banana", "cherry");
+         $firstFruit = array_shift($fruits);
+         echo $firstFruit;
+       ?>
+       ```
+
+    4. **array_unshift()**: This function inserts new items at the beginning of an array
+
+       ```
+       <?php
+        $fruits = array("banana", "cherry");
+        array_unshift($fruits, "apple");
+        print_r($fruits);
+       ?>
+       ```
+
+    5. **count()**: This function is used to count all elements in an array.
+
+       ```
+       <?php
+        $fruits = array("apple", "banana", "cherry");
+        echo count($fruits);
+       ?>
+       ```
+
+    6. **sort()**: This function sorts an array in ascending order.
+
+       ```
+       <?php
+         $fruits = array("cherry", "banana", "apple");
+         sort($fruits);
+         print_r($fruits);
+       ?>
+       ```
+
+    7. **rsort()**: This function sorts an array in descending order.
+
+       ```
+       <?php
+         $fruits = array("apple", "banana", "cherry");
+         rsort($fruits);
+         print_r($fruits);
+       ?>
+       ```
+
+    8. **array_merge()**: This function merges one or more arrays into one array.
+
+       ```
+       <?php
+         $array1 = array("apple", "banana");
+         $array2 = array("cherry", "date");
+         $mergedArray = array_merge($array1, $array2);
+         print_r($mergedArray);
+       ?>
+       ```
+
+    9. **in_array()**: This function checks if a value exists in an array.
+
+       ```
+
+       <?php
+         $fruits = array("apple", "banana", "cherry");
+         if (in_array("banana", $fruits))
+         {
+             echo "Banana is in the array.";
+         }
+         else
+         {
+            echo "Banana is not in the array.";
+         }
+       ?>
+
+       ```
+
+    10. **array_keys()**: This function returns all the keys of an array.
+
+        ```
+        <?php
+          $fruits = array("fruit1" => "apple", "fruit2" => "banana", "fruit3" => "cherry");
+          $keys = array_keys($fruits);
+          print_r($keys);
+        ?>
+        ```
+
+    11. **array_values()**: This function returns all the values of an array.
+
+        ```
+        <?php
+          $fruits = array("fruit1" => "apple", "fruit2" => "banana", "fruit3" => "cherry");
+          $values = array_values($fruits);
+          print_r($values);
+        ?>
+        ```
 
     **[⬆ Back to Top](#table-of-contents)**
