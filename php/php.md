@@ -25,6 +25,6 @@
 
 3.  ### What is the name of scripting engine in PHP?
 
-        The scripting engine in PHP is called **Zend Engine**. It provides PHP with the ability to run scripts efficiently and quickly.
+    The scripting engine in PHP is called Zend Engine. It provides PHP with the ability to run scripts efficiently and quickly.
 
-        **[⬆ Back to Top](#table-of-contents)**
+    **[⬆ Back to Top](#table-of-contents)**
