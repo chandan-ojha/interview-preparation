@@ -9,8 +9,9 @@
 | 1   | [What is PHP?](#what-is-PHP)                                                                                                                        |
 | 2   | [What is PEAR in PHP?](#what-is-pear-in-php)                                                                                                        |
 | 3   | [What is the name of scripting engine in PHP?](#what-is-the-name-of-scripting-engine-in-php)                                                        |
-| 4   | [What is the difference between "Echo", "Print", "Print_r" and "Var_dump"?](#What-is-the-difference-between-echo-print-print_r-and-var_dump-in-PHP) |
-| 5   | [What is the difference between `$message` and `$$message`?](#What-is-the-difference-between-$message-and-$$message-in-PHP)                         |
+| 4   | [What is the difference between "echo", "print", "print_r" and "var_dump"?](#what-is-the-difference-between-echo-print-print_r-and-var_dump-in-PHP) |
+| 5   | [What is the difference between `$message` and `$$message`?](#what-is-the-difference-between-$message-and-$$message-in-PHP)                         |
+| 6   | [Explain the different types of errors in PHP!](#explain-the-different-types-of-errors-in-php)                                                      |
 
 1.  ### What is PHP?
 
@@ -72,5 +73,17 @@
     echo $$message; // Outputs: world
 
     ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+6.  ### Explain the different types of errors in PHP !
+
+    There are three types of errors:
+
+    1. **Notices** : These are trivial, non-critical errors that PHP encounters while executing a script - for example, accessing a variable that has not yet been defined. By default, such errors are not displayed to the user at all - although you can change this default behavior.
+
+    2. **Warnings** : These are more serious errors - for example, attempting to include() a file which does not exist. By default, these errors are displayed to the user, but they do not result in script termination.
+
+    3. **Fatal errors** : These are critical errors - for example, instantiating an object of a non-existent class, or calling a non-existent function. These errors cause the immediate termination of the script, and PHP's default behavior is to display them to the user when they take place.
 
     **[⬆ Back to Top](#table-of-contents)**
