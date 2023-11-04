@@ -19,6 +19,7 @@
 | 11  | [ Explain some of the PHP string functions?](#explain-some-of-the-PHP-string-functions)                                                             |
 | 12  | [Differentiate between require and include?](#differentiate-between-require-and-include)                                                            |
 | 13  | [Explain PHP Variables Scope?](#explain-php-variables-scope)                                                                                        |
+| 14  | [Explain PHP Superglobals variables?](#explain-php-superglobals-variables)                                                                          |
 
 1.  ### What is PHP?
 
@@ -455,7 +456,34 @@
          test();
 
         ?>
-
     ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+14. ### Explain PHP Superglobals variables?
+
+    **PHP Superglobals variables** are built-in variables that are always available in all scopes.
+
+    **PHP Superglobals variables** are used to access global variables from any function, class or file.
+
+    **PHP Superglobals variables** are as follows:
+
+    1. **$GLOBALS** : It is used to access global variables from anywhere in the PHP script (also from within functions or methods).
+
+    2. **$\_SERVER** : It is used to get the information about the server.
+
+    3. **$\_REQUEST** : It is used to collect data after submitting an HTML form.
+
+    4. **$\_POST** : It is used to collect form data after submitting an HTML form with method="post".
+
+    5. **$\_GET** : It is used to collect form data after submitting an HTML form with method="get".
+
+    6. **$\_FILES** : It is used to collect form data after submitting an HTML form with method="post" and enctype="multipart/form-data".
+
+    7. **$\_ENV** : It is used to get the information about the environment.
+
+    8. **$\_COOKIE** : It is used to get the information about the cookie.
+
+    9. **$\_SESSION** : It is used to get the information about the session.
 
     **[⬆ Back to Top](#table-of-contents)**
