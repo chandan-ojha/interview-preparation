@@ -17,6 +17,7 @@
 | 9   | [How many types of array are there in PHP?](#how-many-types-of-array-are-there-in-php)                                                              |
 | 10  | [Explain some of the PHP array functions?](#explain-some-of-the-PHP-array-functions)                                                                |
 | 11  | [ Explain some of the PHP string functions?](#explain-some-of-the-PHP-string-functions)                                                             |
+| 12  | [Differentiate between require and include?](#differentiate-between-require-and-include)                                                            |
 
 1.  ### What is PHP?
 
@@ -394,5 +395,26 @@
            print_r(explode(" ", "Hello World!")); //output: Array ( [0] => Hello [1] => World! )
          ?>
         ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+12. ### Differentiate between require and include?
+
+    **require** and **include** both are used to include a file but if data is not found include sends warning and continue execution script while require sends fatal error and stops the execution.
+
+    **Example**:
+
+    ```
+    <?php
+      include 'myFile.php';
+      echo "Hello World!";
+    ?>
+
+    <?php
+      require 'myFile.php';
+      echo "Hello World!";
+    ?>
+
+    ```
 
     **[⬆ Back to Top](#table-of-contents)**
