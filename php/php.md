@@ -16,6 +16,7 @@
 | 8   | [What is the use of header() function in PHP?](#what-is-the-use-of-header-function-in-php)                                                          |
 | 9   | [How many types of array are there in PHP?](#how-many-types-of-array-are-there-in-php)                                                              |
 | 10  | [Explain some of the PHP array functions?](#explain-some-of-the-PHP-array-functions)                                                                |
+| 11  | [ Explain some of the PHP string functions?](#explain-some-of-the-PHP-string-functions)                                                             |
 
 1.  ### What is PHP?
 
@@ -284,6 +285,114 @@
           $values = array_values($fruits);
           print_r($values);
         ?>
+        ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+11. ### Explain some of the PHP string functions?
+
+    1. **strlen()**: This function returns the length of a string.
+
+       ```
+       <?php
+         echo strlen("Hello World!"); //output: 12
+       ?>
+       ```
+
+    2. **str_word_count()**: This function counts the number of words in a string.
+
+       ```
+       <?php
+         echo str_word_count("Hello World!"); //output: 2
+       ?>
+       ```
+
+    3. **strrev()**: This function reverses a string.
+
+       ```
+       <?php
+         echo strrev("Hello World!"); //output: !dlroW olleH
+       ?>
+       ```
+
+    4. **strpos()**: This function searches for a specific text within a string. If a match is found, the function returns the character position of the first match. If no match is found, it will return FALSE.
+
+       ```
+       <?php
+         echo strpos("Hello World!", "World"); //output: 6
+       ?>
+       ```
+
+    5. **str_replace()**: This function replaces some characters with some other characters in a string.
+
+       ```
+       <?php
+         echo str_replace("World", "Peter", "Hello World!"); //output: Hello Peter!
+       ?>
+       ```
+
+    6. **strtolower()**: This function converts a string to lowercase.
+
+       ```
+        <?php
+          echo strtolower("Hello World!"); //output: hello world!
+        ?>
+       ```
+
+    7. **strtoupper()**: This function converts a string to uppercase.
+
+       ```
+        <?php
+          echo strtoupper("Hello World!"); //output: HELLO WORLD!
+        ?>
+       ```
+
+    8. **ucfirst()**: This function converts the first character of a string to uppercase.
+
+       ```
+        <?php
+          echo ucfirst("hello world!"); //output: Hello world!
+        ?>
+       ```
+
+    9. **ucwords()**: This function converts the first character of each word in a string to uppercase.
+
+       ```
+        <?php
+          echo ucwords("hello world!"); //output: Hello World!
+        ?>
+       ```
+
+    10. **trim()**: This function removes whitespace or other predefined characters from both sides of a string.
+
+        ```
+         <?php
+           echo trim(" Hello World! "); //output: Hello World!
+         ?>
+        ```
+
+    11. **substr()**: This function returns a part of a string.
+
+        ```
+         <?php
+           echo substr("Hello World!", 6); //output: World!
+         ?>
+        ```
+
+    12. **str_repeat()**: This function repeats a string a specified number of times.
+
+        ```
+         <?php
+           echo str_repeat("Hello World!", 3); //output: Hello World! Hello World! Hello World!
+         ?>
+        ```
+
+    13. **explode()**: This function breaks a string into an array.
+
+        ```
+         <?php
+           print_r(explode(" ", "Hello World!")); //output: Array ( [0] => Hello [1] => World! )
+         ?>
         ```
 
     **[⬆ Back to Top](#table-of-contents)**
