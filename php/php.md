@@ -21,6 +21,7 @@
 | 13  | [Explain PHP Variables Scope?](#explain-php-variables-scope)                                                                                        |
 | 14  | [Explain PHP Superglobals variables?](#explain-php-superglobals-variables)                                                                          |
 | 15  | [What are the ways to define a constant in PHP?](#what-are-the-ways-to-define-a-constant-in-php)                                                    |
+| 16  | [What is autoloading in php?](#what-is-autoloading-in-php)                                                                                          |
 
 1.  ### What is PHP?
 
@@ -510,5 +511,25 @@
          echo GREETING;
        ?>
        ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+16. ### What is autoloading in php?
+
+    **Autoloading** is a technique that allows PHP to load classes automatically so that you don't need to include them manually. It is a more flexible alternative to \_\_autoload().
+
+    **Example**:
+
+    ```
+    <?php
+      spl_autoload_register(function ($class_name) {
+        include $class_name . '.php';
+      });
+
+      $obj  = new MyClass1();
+      $obj2 = new MyClass2();
+      $obj3 = new MyClass3();
+    ?>
+    ```
 
     **[⬆ Back to Top](#table-of-contents)**
