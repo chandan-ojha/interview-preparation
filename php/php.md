@@ -439,16 +439,16 @@
         {
           // Local scope
           $localVar = "I'm a local variable";
-          echo $localVar . "\n"; // Add newline character
+          echo $localVar . "\n";
 
           // Access global variable inside function
           global $globalVar;
-          echo $globalVar . "\n"; // Add newline character
+          echo $globalVar . "\n";
 
           // Static variable
           static $staticVar = 0;
           $staticVar++;
-          echo $staticVar . "\n"; // Add newline character
+          echo $staticVar . "\n";
 
          }
 
