@@ -18,6 +18,7 @@
 | 10  | [Explain some of the PHP array functions?](#explain-some-of-the-PHP-array-functions)                                                                |
 | 11  | [ Explain some of the PHP string functions?](#explain-some-of-the-PHP-string-functions)                                                             |
 | 12  | [Differentiate between require and include?](#differentiate-between-require-and-include)                                                            |
+| 13  | [Explain PHP Variables Scope?](#explain-php-variables-scope)                                                                                        |
 
 1.  ### What is PHP?
 
@@ -414,6 +415,46 @@
       require ('myFile.php');
       echo "Hello World!";
     ?>
+
+    ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+13. ### Explain PHP Variables Scope?
+
+    **PHP has three different variable scopes**:
+
+    1. **Local** : A variable declared within a function has a LOCAL SCOPE and can only be accessed within that function.
+    2. **Global** : A variable declared outside a function has a GLOBAL SCOPE and can only be accessed outside a function.
+    3. **Static** : A variable declared within a function with a static keyword has a STATIC SCOPE and can be accessed within a function.
+
+    **Example**:
+
+    ```
+       <?php
+        // Global scope
+        $globalVar = "I'm a global variable";
+
+        function test()
+        {
+          // Local scope
+          $localVar = "I'm a local variable";
+          echo $localVar . "\n"; // Add newline character
+
+          // Access global variable inside function
+          global $globalVar;
+          echo $globalVar . "\n"; // Add newline character
+
+          // Static variable
+          static $staticVar = 0;
+          $staticVar++;
+          echo $staticVar . "\n"; // Add newline character
+
+         }
+
+         test();
+
+        ?>
 
     ```
 
