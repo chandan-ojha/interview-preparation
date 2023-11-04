@@ -406,12 +406,12 @@
 
     ```
     <?php
-      include 'myFile.php';
+      include ('myFile.php');
       echo "Hello World!";
     ?>
 
     <?php
-      require 'myFile.php';
+      require ('myFile.php');
       echo "Hello World!";
     ?>
 
