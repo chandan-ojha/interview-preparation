@@ -20,6 +20,7 @@
 | 12  | [Differentiate between require and include?](#differentiate-between-require-and-include)                                                            |
 | 13  | [Explain PHP Variables Scope?](#explain-php-variables-scope)                                                                                        |
 | 14  | [Explain PHP Superglobals variables?](#explain-php-superglobals-variables)                                                                          |
+| 15  | [What are the ways to define a constant in PHP?](#what-are-the-ways-to-define-a-constant-in-php)                                                    |
 
 1.  ### What is PHP?
 
@@ -485,5 +486,29 @@
     8. **$\_COOKIE** : It is used to get the information about the cookie.
 
     9. **$\_SESSION** : It is used to get the information about the session.
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+15. ### What are the ways to define a constant in PHP?
+
+    There are two ways to define a constant in PHP:
+
+    1. **Using define() function** : This function is used to define a constant. It takes two parameters: the constant name and its value.
+
+       ```
+       <?php
+         define("GREETING", "Welcome to W3Docs.com!");
+         echo GREETING;
+       ?>
+       ```
+
+    2. **Using const keyword** : This keyword is used to define a constant. It takes two parameters: the constant name and its value.
+
+       ```
+       <?php
+         const GREETING = "Welcome to W3Docs.com!";
+         echo GREETING;
+       ?>
+       ```
 
     **[⬆ Back to Top](#table-of-contents)**
