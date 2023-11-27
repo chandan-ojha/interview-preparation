@@ -22,6 +22,7 @@
 | 14  | [Explain PHP Superglobals variables?](#explain-php-superglobals-variables)                                                                          |
 | 15  | [What are the ways to define a constant in PHP?](#what-are-the-ways-to-define-a-constant-in-php)                                                    |
 | 16  | [What is autoloading in php?](#what-is-autoloading-in-php)                                                                                          |
+| 17  | [What is the difference between == and ===?](#what-is-the-difference-between-==-and-===)                                                            |
 
 1.  ### What is PHP?
 
@@ -529,6 +530,33 @@
       $obj  = new MyClass1();
       $obj2 = new MyClass2();
       $obj3 = new MyClass3();
+    ?>
+    ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+17. ## What is the difference between == and ===?
+
+    **==** checks for equality only, whereas **===** checks for equality and type.
+
+    **Example**:
+
+    ```
+    <?php
+      $num = 5;
+      $num2 = '5';
+
+      if ($num == $num2) {
+        echo 'Equal';
+      } else {
+        echo 'Not equal';
+      }
+
+      if ($num === $num2) {
+        echo 'Equal';
+      } else {
+        echo 'Not equal';
+      }
     ?>
     ```
 
