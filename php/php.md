@@ -583,7 +583,7 @@
 
     **[⬆ Back to Top](#table-of-contents)**
 
-19. ## what is htmlspecialchars in php?
+19. ## What is htmlspecialchars in php?
 
     **htmlspecialchars()** function converts some predefined characters to HTML entities. It is used to avoid cross-site scripting (XSS) attacks.
 
