@@ -24,6 +24,7 @@
 | 16  | [What is autoloading in php?](#what-is-autoloading-in-php)                                                                                          |
 | 17  | [What is the difference between == and ===?](#what-is-the-difference-between-==-and-===)                                                            |
 | 18  | [What is magic number in PHP?](#what-is-magic-number-in-php)                                                                                        |
+| 19  | [what is htmlspecialchars in php?](#what-is-htmlspecialchars-in-php)                                                                                |
 
 1.  ### What is PHP?
 
@@ -578,6 +579,21 @@
 
        echo calculateArea(5);
      ?>
+    ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+19. ## what is htmlspecialchars in php?
+
+    **htmlspecialchars()** function converts some predefined characters to HTML entities. It is used to avoid cross-site scripting (XSS) attacks.
+
+    **Example**:
+
+    ```
+    <?php
+      $str = "Hello World!";
+      echo htmlspecialchars($str);
+    ?>
     ```
 
     **[⬆ Back to Top](#table-of-contents)**
