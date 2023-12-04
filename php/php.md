@@ -23,6 +23,7 @@
 | 15  | [What are the ways to define a constant in PHP?](#what-are-the-ways-to-define-a-constant-in-php)                                                    |
 | 16  | [What is autoloading in php?](#what-is-autoloading-in-php)                                                                                          |
 | 17  | [What is the difference between == and ===?](#what-is-the-difference-between-==-and-===)                                                            |
+| 18  | [What is magic number in PHP?](#what-is-magic-number-in-php)                                                                                        |
 
 1.  ### What is PHP?
 
@@ -559,5 +560,24 @@
       }
     ?>
     ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+    18. ## What is magic number in PHP?
+
+        **Magic numbers** are the numeric values that are used without any explanation of what they mean or why they are used. It is considered as a bad programming practice because it makes the code hard to understand and maintain.
+
+        **Example**:
+
+        ```
+        <?php
+          function calculateArea($radius)
+          {
+            return 3.14 * $radius * $radius;
+          }
+
+          echo calculateArea(5);
+        ?>
+        ```
 
     **[⬆ Back to Top](#table-of-contents)**
