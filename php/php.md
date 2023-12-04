@@ -563,21 +563,21 @@
 
     **[⬆ Back to Top](#table-of-contents)**
 
-    18. ## What is magic number in PHP?
+18. ## What is magic number in PHP?
 
-        **Magic numbers** are the numeric values that are used without any explanation of what they mean or why they are used. It is considered as a bad programming practice because it makes the code hard to understand and maintain.
+    **Magic numbers** are the numeric values that are used without any explanation of what they mean or why they are used. It is considered as a bad programming practice because it makes the code hard to understand and maintain.
 
-        **Example**:
+    **Example**:
 
-        ```
-        <?php
-          function calculateArea($radius)
-          {
-            return 3.14 * $radius * $radius;
-          }
+    ```
+     <?php
+       function calculateArea($radius)
+       {
+         return 3.14 * $radius * $radius;
+       }
 
-          echo calculateArea(5);
-        ?>
-        ```
+       echo calculateArea(5);
+     ?>
+    ```
 
     **[⬆ Back to Top](#table-of-contents)**
