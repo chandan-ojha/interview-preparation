@@ -25,6 +25,7 @@
 | 17  | [What is the difference between == and ===?](#what-is-the-difference-between-==-and-===)                                                            |
 | 18  | [What is magic number in PHP?](#what-is-magic-number-in-php)                                                                                        |
 | 19  | [what is htmlspecialchars in php?](#what-is-htmlspecialchars-in-php)                                                                                |
+| 20  | [What is the use of DIR in PHP?](#what-is-the-use-of-dir-in-php)                                                                                    |
 
 1.  ### What is PHP?
 
