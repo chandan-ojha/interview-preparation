@@ -629,3 +629,22 @@
     ```
 
     **[⬆ Back to Top](#table-of-contents)**
+
+22. # What are the advantages of using namespaces in PHP?
+
+    **Namespaces** are used to avoid naming collisions between classes, functions, constants, etc. It allows us to group classes, interfaces, functions, and constants into a logical group.
+
+    **Example**:
+
+    ```
+    <?php
+      namespace MyProject;
+
+      const CONNECT_OK = 1;
+      class Connection { /* ... */ }
+      function connect() { /* ... */  }
+
+    ?>
+    ```
+
+    **[⬆ Back to Top](#table-of-contents)**
