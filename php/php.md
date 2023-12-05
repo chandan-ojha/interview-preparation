@@ -597,3 +597,17 @@
     ```
 
     **[⬆ Back to Top](#table-of-contents)**
+
+20. ## What is the use of DIR in PHP?
+
+    **DIR** is a magic constant that returns the directory of the current file.
+
+    **Example**:
+
+    ```
+    <?php
+      echo __DIR__;
+    ?>
+    ```
+
+    **[⬆ Back to Top](#table-of-contents)**
