@@ -27,6 +27,7 @@
 | 19  | [What is htmlspecialchars in php?](#what-is-htmlspecialchars-in-php)                                                                                |
 | 20  | [What is the use of DIR in PHP?](#what-is-the-use-of-dir-in-php)                                                                                    |
 | 21  | [What is the purpose of the extract() function?](#what-is-the-purpose-of-the-extract-function)                                                      |
+| 22  | [What are the advantages of using namespaces in PHP?](#what-are-the-advantages-of-using-namespaces-in-php)                                          |
 
 1.  ### What is PHP?
 
@@ -630,7 +631,7 @@
 
     **[⬆ Back to Top](#table-of-contents)**
 
-22. # What are the advantages of using namespaces in PHP?
+22. ## What are the advantages of using namespaces in PHP?
 
     **Namespaces** are used to avoid naming collisions between classes, functions, constants, etc. It allows us to group classes, interfaces, functions, and constants into a logical group.
 
