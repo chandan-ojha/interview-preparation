@@ -26,6 +26,7 @@
 | 18  | [What is magic number in PHP?](#what-is-magic-number-in-php)                                                                                        |
 | 19  | [What is htmlspecialchars in php?](#what-is-htmlspecialchars-in-php)                                                                                |
 | 20  | [What is the use of DIR in PHP?](#what-is-the-use-of-dir-in-php)                                                                                    |
+| 21  | [What is the purpose of the extract() function?](#what-is-the-purpose-of-the-extract-function)                                                      |
 
 1.  ### What is PHP?
 
@@ -608,6 +609,22 @@
     ```
     <?php
       echo __DIR__;
+    ?>
+    ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+21. ## What is the purpose of the extract() function?
+
+    **extract()** is an inbuilt function in PHP. The extract() function does array to variable conversion. That is it converts array keys into variable names and array values into variable value.
+
+    **Example**:
+
+    ```
+    <?php
+      $fruits = array("apple" => "red", "banana" => "yellow");
+      extract($fruits);
+      echo "Apple is $apple and Banana is $banana";
     ?>
     ```
 
