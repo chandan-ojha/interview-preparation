@@ -27,7 +27,8 @@
 | 19  | [What is htmlspecialchars in php?](#what-is-htmlspecialchars-in-php)                                                                                |
 | 20  | [What is the use of DIR in PHP?](#what-is-the-use-of-dir-in-php)                                                                                    |
 | 21  | [What is the purpose of the extract() function?](#what-is-the-purpose-of-the-extract-function)                                                      |
-| 22  | [What are the advantages of using namespaces in PHP?](#what-are-the-advantages-of-using-namespaces-in-php)                                          |
+| 22  | [What is compact() function in PHP?](#what-is-compact-function-in-php)                                                                              |
+| 23  | [What are the advantages of using namespaces in PHP?](#what-are-the-advantages-of-using-namespaces-in-php)                                          |
 
 1.  ### What is PHP?
 
@@ -631,7 +632,26 @@
 
     **[⬆ Back to Top](#table-of-contents)**
 
-22. ## What are the advantages of using namespaces in PHP?
+22. ## What is compact() function in PHP?
+
+    **compact()** is an inbuilt function in PHP. The compact() function creates an array from variables and their values.
+
+    **Example**:
+
+    ```
+    <?php
+      $name = "Peter";
+      $age = "41";
+      $city = "New York";
+
+      $result = compact("name", "age", "city");
+      print_r($result);
+    ?>
+    ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+23. ## What are the advantages of using namespaces in PHP?
 
     **Namespaces** are used to avoid naming collisions between classes, functions, constants, etc. It allows us to group classes, interfaces, functions, and constants into a logical group.
 
