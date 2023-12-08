@@ -29,6 +29,7 @@
 | 21  | [What is the purpose of the extract() function?](#what-is-the-purpose-of-the-extract-function)                                                      |
 | 22  | [What is compact() function in PHP?](#what-is-compact-function-in-php)                                                                              |
 | 23  | [What are the advantages of using namespaces in PHP?](#what-are-the-advantages-of-using-namespaces-in-php)                                          |
+| 24  | [What does call_user_func() do in PHP?](#what-does-call_user_func-do-in-php)                                                                        |
 
 1.  ### What is PHP?
 
@@ -665,6 +666,25 @@
       class Connection { /* ... */ }
       function connect() { /* ... */  }
 
+    ?>
+    ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+24. ## What does call_user_func() do in PHP?
+
+    **call_user_func()** is an inbuilt function in PHP which is used to call the callback given by the first parameter and passes the remaining parameters as argument. It is used to call the user-defined functions.
+
+    **Example**:
+
+    ```
+    <?php
+      function hello($name)
+      {
+        echo "Hello $name";
+      }
+
+      call_user_func('hello', 'Peter');
     ?>
     ```
 
