@@ -30,6 +30,7 @@
 | 22  | [What is compact() function in PHP?](#what-is-compact-function-in-php)                                                                              |
 | 23  | [What are the advantages of using namespaces in PHP?](#what-are-the-advantages-of-using-namespaces-in-php)                                          |
 | 24  | [What does call_user_func() do in PHP?](#what-does-call_user_func-do-in-php)                                                                        |
+| 25  | [What is the use of session in PHP?](#what-is-the-use-of-session-in-php)                                                                            |
 
 1.  ### What is PHP?
 
