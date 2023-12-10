@@ -689,3 +689,19 @@
     ```
 
     **[⬆ Back to Top](#table-of-contents)**
+
+25. ## What is the use of session in PHP?
+
+    **Session** is used to store information about the user across the various pages of a website. It is used to store and access the user information as well as variables across the pages of a website.
+
+    **Example**:
+
+    ```
+    <?php
+      session_start();
+      $_SESSION['name'] = 'Peter';
+      $_SESSION['age'] = '41';
+    ?>
+    ```
+
+    **[⬆ Back to Top](#table-of-contents)**
