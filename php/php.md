@@ -31,6 +31,7 @@
 | 23  | [What are the advantages of using namespaces in PHP?](#what-are-the-advantages-of-using-namespaces-in-php)                                          |
 | 24  | [What does call_user_func() do in PHP?](#what-does-call_user_func-do-in-php)                                                                        |
 | 25  | [What is the use of session in PHP?](#what-is-the-use-of-session-in-php)                                                                            |
+| 26  | [What are the cookies in PHP?](#what-are-the-cookies-in-php)                                                                                        |
 
 1.  ### What is PHP?
 
@@ -702,6 +703,23 @@
       session_start();
       $_SESSION['name'] = 'Peter';
       $_SESSION['age'] = '41';
+    ?>
+    ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+26. ## What are the cookies in PHP?
+
+    **Cookies** is a small piece of information which is stored at client browser. It is used to recognize the user.
+    Cookie is created at server side and saved to client browser. Each time when client sends request to the server, cookie is embedded with request. Such way, cookie can be received at the server side.
+
+    **Example**:
+
+    ```
+    <?php
+      $name = "Peter";
+      $age = "41";
+      setcookie($name, $age, time() + (86400 * 30), "/");
     ?>
     ```
 
