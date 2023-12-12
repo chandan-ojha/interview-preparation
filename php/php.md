@@ -32,6 +32,7 @@
 | 24  | [What does call_user_func() do in PHP?](#what-does-call_user_func-do-in-php)                                                                        |
 | 25  | [What is the use of session in PHP?](#what-is-the-use-of-session-in-php)                                                                            |
 | 26  | [What are the cookies in PHP?](#what-are-the-cookies-in-php)                                                                                        |
+| 27  | [What does session_get_cookie_params() do in PHP?](#what-does-session_get_cookie_params-do-in-php)                                                  |
 
 1.  ### What is PHP?
 
@@ -720,6 +721,20 @@
       $name = "Peter";
       $age = "41";
       setcookie($name, $age, time() + (86400 * 30), "/");
+    ?>
+    ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+27. ## What does session_get_cookie_params() do in PHP?
+
+    **session_get_cookie_params()** is an inbuilt function in PHP which is used to get the session cookie parameters.
+
+    **Example**:
+
+    ```
+    <?php
+      print_r(session_get_cookie_params());
     ?>
     ```
 
