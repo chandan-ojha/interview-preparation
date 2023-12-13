@@ -34,6 +34,7 @@
 | 26  | [What are the cookies in PHP?](#what-are-the-cookies-in-php)                                                                                        |
 | 27  | [What does session_get_cookie_params() do in PHP?](#what-does-session_get_cookie_params-do-in-php)                                                  |
 | 28  | [What does session_regenerate_id() do in PHP?](#what-does-session_regenerate_id-do-in-php)                                                          |
+| 29  | [What is the difference between unset() and unlink()?](#what-is-the-difference-between-unset-and-unlink)                                            |
 
 1.  ### What is PHP?
 
@@ -751,6 +752,27 @@
     <?php
       session_start();
       session_regenerate_id();
+    ?>
+    ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+29. ## What is the difference between unset() and unlink()?
+
+    **unset()** is a PHP inbuilt function, which is used to destroys the specified variables.
+
+    **unlink()** is a PHP inbuilt function, which is used to delete a certain file.
+
+    **Example**:
+
+    ```
+    <?php
+      $name = "Peter";
+      unset($name);
+
+      $file = "test.txt";
+      unlink($file);
+
     ?>
     ```
 
