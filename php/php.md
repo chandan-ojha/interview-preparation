@@ -35,6 +35,7 @@
 | 27  | [What does session_get_cookie_params() do in PHP?](#what-does-session_get_cookie_params-do-in-php)                                                  |
 | 28  | [What does session_regenerate_id() do in PHP?](#what-does-session_regenerate_id-do-in-php)                                                          |
 | 29  | [What is the difference between unset() and unlink()?](#what-is-the-difference-between-unset-and-unlink)                                            |
+| 30  | [What is the difference between new self and new static in PHP?](#what-is-the-difference-between-new-self-and-new-static-in-php)                    |
 
 1.  ### What is PHP?
 
@@ -773,6 +774,41 @@
       $file = "test.txt";
       unlink($file);
 
+    ?>
+    ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+30. ## What is the difference between new self and new static in PHP?
+
+    **new self** refers to the same class in which the new keyword is actually written.
+
+    **new static** refers to the same class in which the new keyword is actually written at runtime.
+
+    **Example**:
+
+    ```
+    <?php
+      class A
+      {
+        public static function get_self()
+        {
+          return new self();
+        }
+
+        public static function get_static()
+        {
+          return new static();
+        }
+      }
+
+      class B extends A
+      {
+
+      }
+
+      echo get_class(B::get_self()); // Output: A
+      echo get_class(B::get_static()); // Output: B
     ?>
     ```
 
