@@ -37,6 +37,7 @@
 | 29  | [What is the difference between unset() and unlink()?](#what-is-the-difference-between-unset-and-unlink)                                            |
 | 30  | [What is the difference between new self and new static in PHP?](#what-is-the-difference-between-new-self-and-new-static-in-php)                    |
 | 31  | [What is the exception handling in PHP?](#what-is-the-exception-handling-in-php)                                                                    |
+| 32  | [What does HTTP_REFERER do in PHP?](#what-does-http_referer-do-in-php)                                                                              |
 
 1.  ### What is PHP?
 
@@ -847,6 +848,20 @@
       } finally {
         echo "Process complete.";
       }
+    ?>
+    ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+32. ## What does HTTP_REFERER do in PHP?
+
+    **HTTP_REFERER** is a PHP inbuilt variable which is used to return the URL of the page from which the request was sent.
+
+    **Example**:
+
+    ```
+    <?php
+      echo $_SERVER['HTTP_REFERER'];
     ?>
     ```
 
