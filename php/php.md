@@ -36,6 +36,7 @@
 | 28  | [What does session_regenerate_id() do in PHP?](#what-does-session_regenerate_id-do-in-php)                                                          |
 | 29  | [What is the difference between unset() and unlink()?](#what-is-the-difference-between-unset-and-unlink)                                            |
 | 30  | [What is the difference between new self and new static in PHP?](#what-is-the-difference-between-new-self-and-new-static-in-php)                    |
+| 31  | [What is the exception handling in PHP?](#what-is-the-exception-handling-in-php)                                                                    |
 
 1.  ### What is PHP?
 
@@ -809,6 +810,43 @@
 
       echo get_class(B::get_self()); // Output: A
       echo get_class(B::get_static()); // Output: B
+    ?>
+    ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+31. ## What is the exception handling in PHP?
+
+    **Exception handling** in PHP allows you to manage errors or exceptional situations that might occur during the execution of a script.
+
+    **PHP provides the following specialized keywords for this purpose.**
+
+    **try** a function using an exception should be in a "try" block. If the exception does not trigger, the code will continue as normal. However if the exception triggers, an exception is "thrown".
+
+    **throw** this is how you trigger an exception. Each "throw" must have at least one "catch"
+
+    **catch** a "catch" block retrieves an exception and creates an object containing the exception information
+
+    **finally** the finally block can be specified after or in place of catch block. It always executes just after the try and catch block whether an exception has been thrown or not, and before the normal execution restarts.
+
+    **Example**:
+
+    ```
+    <?php
+      function divide($dividend, $divisor) {
+        if($divisor == 0) {
+          throw new Exception("Division by zero");
+        }
+        return $dividend / $divisor;
+      }
+
+      try {
+        echo divide(5, 0);
+      } catch(Exception $e) {
+        echo " Unable to divide. ";
+      } finally {
+        echo "Process complete.";
+      }
     ?>
     ```
 
