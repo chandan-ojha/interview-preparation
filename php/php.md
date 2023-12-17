@@ -38,6 +38,7 @@
 | 30  | [What is the difference between new self and new static in PHP?](#what-is-the-difference-between-new-self-and-new-static-in-php)                    |
 | 31  | [What is the exception handling in PHP?](#what-is-the-exception-handling-in-php)                                                                    |
 | 32  | [What does HTTP_REFERER do in PHP?](#what-does-http_referer-do-in-php)                                                                              |
+| 33  | [What are magic methods and how to use them in PHP ?](#what-are-magic-methods-and-how-to-use-them-in-php)                                           |
 
 1.  ### What is PHP?
 
@@ -862,6 +863,468 @@
     ```
     <?php
       echo $_SERVER['HTTP_REFERER'];
+    ?>
+    ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+33. ## What are magic methods and how to use them in PHP ?
+
+    **Magic methods** are special methods that are called automatically when certain conditions are met. They are always preceded with two underscores.
+
+    **Some of the magic methods are as follows:**
+
+    **\_\_construct()** : The **construct()** method is called automatically when a class is initiated, and it has a function name **construct()**. This method can be used to initialize class properties.
+
+    **Example**:
+
+    ```
+    <?php
+      class Fruit {
+        public $name;
+        public $color;
+
+        function __construct($name, $color) {
+          $this->name = $name;
+          $this->color = $color;
+        }
+
+        function intro() {
+          echo "The fruit is {$this->name} and the color is {$this->color}.";
+        }
+      }
+
+      $apple = new Fruit("Apple", "red");
+      $apple->intro();
+    ?>
+    ```
+
+    **\_\_destruct()** : The **destruct()** method is called automatically when the object is destroyed or the script is stopped or exited. The **destruct()** method that will be called last, after all the other methods have been called.
+
+    **Example**:
+
+    ```
+    <?php
+      class Fruit {
+        public $name;
+        public $color;
+
+        function __construct($name, $color) {
+          $this->name = $name;
+          $this->color = $color;
+        }
+
+        function intro() {
+          echo "The fruit is {$this->name} and the color is {$this->color}.";
+        }
+
+        function __destruct() {
+          echo "The fruit is {$this->name} and the color is {$this->color}.";
+        }
+      }
+
+      $apple = new Fruit("Apple", "red");
+      $apple->intro();
+    ?>
+    ```
+
+    **\_\_call()** : The **call()** method is triggered when invoking inaccessible methods in an object context. The **call()** method accepts two parameters: the first parameter ($name) contains the name of the method that was called, the second parameter ($arguments) contains an enumerated array that contains the parameters passed to the $name method.
+
+    **Example**:
+
+    ```
+    <?php
+      class Fruit {
+        public $name;
+        public $color;
+
+        function __construct($name, $color) {
+          $this->name = $name;
+          $this->color = $color;
+        }
+
+        function intro() {
+          echo "The fruit is {$this->name} and the color is {$this->color}.";
+        }
+
+        function __call($name, $arguments) {
+          echo "The method $name does not exist";
+        }
+      }
+
+      $apple = new Fruit("Apple", "red");
+      $apple->hello();
+    ?>
+    ```
+
+    **\_\_callStatic()** : The **callStatic()** method is triggered when invoking inaccessible methods in a static context. The **callStatic()** method accepts two parameters: the first parameter ($name) contains the name of the method that was called, the second parameter ($arguments) contains an enumerated array that contains the parameters passed to the $name method.
+
+    **Example**:
+
+    ```
+    <?php
+      class Fruit {
+        public $name;
+        public $color;
+
+        function __construct($name, $color) {
+          $this->name = $name;
+          $this->color = $color;
+        }
+
+        function intro() {
+          echo "The fruit is {$this->name} and the color is {$this->color}.";
+        }
+
+        public static function __callStatic($name, $arguments) {
+          echo "The method $name does not exist";
+        }
+      }
+
+      Fruit::hello();
+    ?>
+    ```
+
+    **\_\_get()** : The **get()** method is utilized for reading data from inaccessible properties. The **get()** method accepts one parameter: the $name property name.
+
+    **Example**:
+
+    ```
+    <?php
+      class Fruit {
+        private $name;
+
+        public function __construct($name) {
+          $this->name = $name;
+        }
+
+        public function __get($name) {
+          return $this->$name;
+        }
+      }
+
+      $apple = new Fruit('Apple');
+      echo $apple->name;
+    ?>
+    ```
+
+    **\_\_set()** : The **set()** method is run when writing data to inaccessible properties. The **set()** method accepts two parameters: the $name property name and the $value property value.
+
+    **Example**:
+
+    ```
+    <?php
+      class Fruit {
+        public $name;
+
+        public function __construct($name) {
+          $this->name = $name;
+        }
+
+        public function __set($name, $value) {
+          $this->$name = $value;
+        }
+      }
+
+      $fruit = new Fruit('Apple');
+      $fruit->name = 'Mango';
+      echo $fruit->name;
+    ?>
+    ```
+
+    **\_\_isset()** : The **isset()** method is triggered by calling isset() or empty() on inaccessible properties. The **isset()** method accepts one parameter: the $name property name.
+
+    **Example**:
+
+    ```
+    <?php
+      class Fruit {
+        public $name;
+
+        public function __construct($name) {
+          $this->name = $name;
+        }
+
+        public function __isset($name) {
+          return isset($this->$name);
+        }
+      }
+
+      $fruit = new Fruit('Apple');
+      var_dump(isset($fruit->name));
+    ?>
+    ```
+
+    **\_\_unset()** : The **unset()** method is invoked when **unset()** is used on inaccessible or non-existing properties. The **unset()** method accepts one parameter: the $name property name.
+
+    **Example**:
+
+    ```
+    <?php
+      class Fruit {
+        public $name;
+
+        public function __construct($name) {
+          $this->name = $name;
+        }
+
+        public function __unset($name) {
+          unset($this->$name);
+        }
+      }
+
+      $fruit = new Fruit('Apple');
+      unset($fruit->name);
+      echo $fruit->name;
+    ?>
+    ```
+
+    **\_\_sleep()** : The **sleep()** method is used for cleanup tasks. This method is executed when the **serialize()** method is called. The **sleep()** method accepts no parameters and returns an array with the names of all the properties that should be saved.
+
+    **Example**:
+
+    ```
+    <?php
+      class Fruit {
+        public $name;
+        public $color;
+
+        public function __construct($name, $color) {
+          $this->name = $name;
+          $this->color = $color;
+        }
+
+        public function __sleep() {
+          return array('name', 'color');
+        }
+      }
+
+      $fruit = new Fruit('Apple', 'red');
+      $data = serialize($fruit);
+      echo $data;
+    ?>
+    ```
+
+    **\_\_wakeup()** : The **wakeup()** method is used for reestablishing any database connections that may have been lost during serialization and perform other reinitialization tasks. This method is executed when the **unserialize()** method is called. The **wakeup()** method accepts no parameters and does not return any value.
+
+    **Example**:
+
+    ```
+    <?php
+      class Fruit {
+        public $name;
+        public $color;
+
+        public function __construct($name, $color) {
+          $this->name = $name;
+          $this->color = $color;
+        }
+
+        public function __sleep() {
+          return array('name', 'color');
+        }
+
+        public function __wakeup() {
+          echo "The color of {$this->name} is {$this->color}.";
+        }
+      }
+
+      $fruit = new Fruit('Apple', 'red');
+      $data = serialize($fruit);
+      echo $data;
+      $fruit = unserialize($data);
+    ?>
+    ```
+
+    **\_\_Serialize()** : The **serialize()** method is used to define a serialization-friendly arbitrary representation of the object.
+
+    **Example**:
+
+    ```
+    <?php
+      class Fruit {
+        public $name;
+        public $color;
+
+        public function __construct($name, $color) {
+          $this->name = $name;
+          $this->color = $color;
+        }
+
+        public function __sleep() {
+          return array('name', 'color');
+        }
+
+        public function __wakeup() {
+          echo "The color of {$this->name} is {$this->color}.";
+        }
+      }
+
+      $fruit = new Fruit('Apple', 'red');
+      $data = serialize($fruit);
+      echo $data;
+    ?>
+    ```
+
+    **\_\_unserialize()** : The **unserialize()** method is used to converts serialized data back into actual data.
+    **Example**:
+
+    ```
+    <?php
+      class Fruit {
+        public $name;
+        public $color;
+
+        public function __construct($name, $color) {
+          $this->name = $name;
+          $this->color = $color;
+        }
+
+        public function __sleep() {
+          return array('name', 'color');
+        }
+
+        public function __wakeup() {
+          echo "The color of {$this->name} is {$this->color}.";
+        }
+      }
+
+      $fruit = new Fruit('Apple', 'red');
+      $data = serialize($fruit);
+      echo $data;
+      $fruit = unserialize($data);
+    ?>
+    ```
+
+    **\_\_toString()** : The **toString()** method allows a class to decide how it will react when it is treated like a string. The **toString()** method must return a string value, otherwise a fatal **E_RECOVERABLE_ERROR** type error is issued.
+
+    **Example**:
+
+    ```
+    <?php
+      class Fruit {
+        public $name;
+        public $color;
+
+        public function __construct($name, $color) {
+          $this->name = $name;
+          $this->color = $color;
+        }
+
+        public function __toString() {
+          return "The color of {$this->name} is {$this->color}.";
+        }
+      }
+
+      $fruit = new Fruit('Apple', 'red');
+      echo $fruit;
+    ?>
+    ```
+
+    **\_\_invoke()** : The **invoke()** method is called when a script tries to call an object as a function. The **invoke()** method accepts arguments as an array, and these arguments are the arguments passed to the object when it was called.
+
+    **Example**:
+
+    ```
+    <?php
+      class Fruit {
+        public $name;
+        public $color;
+
+        public function __construct($name, $color) {
+          $this->name = $name;
+          $this->color = $color;
+        }
+
+        public function __invoke() {
+          echo "The color of {$this->name} is {$this->color}.";
+        }
+      }
+
+      $fruit = new Fruit('Apple', 'red');
+      $fruit();
+    ?>
+    ```
+
+    **\_\_set_state()** : The **set_state()** method is called when var_export() is called on an object. The **set_state()** method accepts an array of properties exported by var_export().
+
+    **Example**:
+
+    ```
+    <?php
+      class Fruit {
+        public $name;
+        public $color;
+
+        public function __construct($name, $color) {
+          $this->name = $name;
+          $this->color = $color;
+        }
+
+        public static function __set_state($an_array) {
+          $obj = new Fruit($an_array['name'], $an_array['color']);
+          return $obj;
+        }
+      }
+
+      $fruit = new Fruit('Apple', 'red');
+      eval('$b = ' . var_export($fruit, true) . ';');
+      var_dump($b);
+    ?>
+    ```
+
+    **\_\_clone()** : The **clone()** method is called when an object is cloned. The **clone()** method can be used to modify the properties of the cloned object before it is used.
+
+    **Example**:
+
+    ```
+    <?php
+      class Fruit {
+        public $name;
+        public $color;
+
+        public function __construct($name, $color) {
+          $this->name = $name;
+          $this->color = $color;
+        }
+
+        public function __clone() {
+          $this->color = 'yellow';
+        }
+      }
+
+      $fruit = new Fruit('Apple', 'red');
+      $fruit2 = clone $fruit;
+      echo $fruit->color;
+      echo $fruit2->color;
+    ?>
+    ```
+
+    **\_\_debugInfo()** : The **debugInfo()** method is called by **var_dump()** when dumping an object to get the properties that should be shown. If the **debugInfo()** method is not defined, then all public, protected, and private properties will be shown.
+
+    **Example**:
+
+    ```
+    <?php
+      class Fruit {
+        public $name;
+        public $color;
+
+        public function __construct($name, $color) {
+          $this->name = $name;
+          $this->color = $color;
+        }
+
+        public function __debugInfo() {
+          return [
+            'name' => $this->name,
+            'color' => $this->color,
+          ];
+        }
+      }
+
+      $fruit = new Fruit('Apple', 'red');
+      var_dump($fruit);
     ?>
     ```
 
