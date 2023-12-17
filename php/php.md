@@ -1136,7 +1136,7 @@
     ?>
     ```
 
-    **\_\_Serialize()** : The **serialize()** method is used to define a serialization-friendly arbitrary representation of the object.
+    **\_\_serialize()** : The **serialize()** method is used to define a serialization-friendly arbitrary representation of the object.
 
     **Example**:
 
@@ -1167,6 +1167,7 @@
     ```
 
     **\_\_unserialize()** : The **unserialize()** method is used to converts serialized data back into actual data.
+
     **Example**:
 
     ```
