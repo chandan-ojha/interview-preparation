@@ -309,6 +309,56 @@
         ?>
         ```
 
+    12. **array_sum()**: This function returns the sum of all the values in an array.
+
+        ```
+        <?php
+          $numbers = array(1, 2, 3, 4, 5);
+          echo array_sum($numbers);
+        ?>
+        ```
+
+    13. **array_map()**: This function sends each value of an array to a user-made function, and returns an array with new values, given by the user-made function.
+
+        ```
+        <?php
+          function myfunction($value)
+          {
+            return($value*$value);
+          }
+
+          $a=array(1,2,3,4,5);
+          print_r(array_map("myfunction",$a));
+        ?>
+        ```
+
+    14. **array_column()**: This function returns the values from a single column in the input array.
+
+        ```
+        <?php
+          $a = array(
+            array(
+              'id' => 5698,
+              'first_name' => 'Peter',
+              'last_name' => 'Griffin',
+            ),
+            array(
+              'id' => 4767,
+              'first_name' => 'Ben',
+              'last_name' => 'Smith',
+            ),
+            array(
+              'id' => 3809,
+              'first_name' => 'Joe',
+              'last_name' => 'Doe',
+            )
+          );
+
+          $last_names = array_column($a, 'last_name');
+          print_r($last_names);
+        ?>
+        ```
+
     **[⬆ Back to Top](#table-of-contents)**
 
 11. ### Explain some of the PHP string functions?
