@@ -41,6 +41,7 @@
 | 33  | [What are magic methods and how to use them in PHP ?](#what-are-magic-methods-and-how-to-use-them-in-php)                                           |
 | 34  | [What is ReflectionClass class in PHP?](#what-is-reflectionclass-class-in-php)                                                                      |
 | 35  | [What is ReflectionMethod class in PHP?](#what-is-reflectionmethod-class-in-php)                                                                    |
+| 36  | [What is the use of sscanf in PHP?](#what-is-the-use-of-sscanf-in-php)                                                                              |
 
 1.  ### What is PHP?
 
@@ -1428,6 +1429,22 @@
 
       $reflection = new ReflectionMethod('Fruit', '__construct');
       var_dump($reflection);
+    ?>
+    ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+36. ## What is the use of sscanf in PHP?
+
+    **sscanf()** is an inbuilt function in PHP which is used to read formatted input from a string. It is used to parse a string from left to right using a specified format.
+
+    **Example**:
+
+    ```
+    <?php
+      $str = "Peter is 41 years old.";
+      sscanf($str, "%s is %d years old.", $name, $age);
+      echo $name . " " . $age;
     ?>
     ```
 
