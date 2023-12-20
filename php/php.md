@@ -42,6 +42,7 @@
 | 34  | [What is ReflectionClass class in PHP?](#what-is-reflectionclass-class-in-php)                                                                      |
 | 35  | [What is ReflectionMethod class in PHP?](#what-is-reflectionmethod-class-in-php)                                                                    |
 | 36  | [What is the use of sscanf in PHP?](#what-is-the-use-of-sscanf-in-php)                                                                              |
+| 37  | [What does list() do in PHP?](#what-does-list-do-in-php)                                                                                            |
 
 1.  ### What is PHP?
 
@@ -1445,6 +1446,22 @@
       $str = "Peter is 41 years old.";
       sscanf($str, "%s is %d years old.", $name, $age);
       echo $name . " " . $age;
+    ?>
+    ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+37. ## What does list() do in PHP?
+
+    **list()** is an inbuilt function in PHP which is used to assign values to a list of variables in one operation.
+
+    **Example**:
+
+    ```
+    <?php
+      $fruits = array("apple", "banana", "cherry");
+      list($a, $b, $c) = $fruits;
+      echo $a . " " . $b . " " . $c;
     ?>
     ```
 
