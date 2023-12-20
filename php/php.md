@@ -40,6 +40,7 @@
 | 32  | [What does HTTP_REFERER do in PHP?](#what-does-http_referer-do-in-php)                                                                              |
 | 33  | [What are magic methods and how to use them in PHP ?](#what-are-magic-methods-and-how-to-use-them-in-php)                                           |
 | 34  | [What is ReflectionClass class in PHP?](#what-is-reflectionclass-class-in-php)                                                                      |
+| 35  | [What is ReflectionMethod class in PHP?](#what-is-reflectionmethod-class-in-php)                                                                    |
 
 1.  ### What is PHP?
 
@@ -1401,6 +1402,31 @@
       }
 
       $reflection = new ReflectionClass('Fruit');
+      var_dump($reflection);
+    ?>
+    ```
+
+    **[⬆ Back to Top](#table-of-contents)**
+
+35. ## What is ReflectionMethod class in PHP?
+
+    **ReflectionMethod** class is used to get information about a method.
+
+    **Example**:
+
+    ```
+    <?php
+      class Fruit {
+        public $name;
+        public $color;
+
+        public function __construct($name, $color) {
+          $this->name = $name;
+          $this->color = $color;
+        }
+      }
+
+      $reflection = new ReflectionMethod('Fruit', '__construct');
       var_dump($reflection);
     ?>
     ```
